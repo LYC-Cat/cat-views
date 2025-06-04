@@ -4,6 +4,8 @@ import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
 import { useRouter } from 'vue-router'
+import router from "@/router/index.js";
+
 
 //form data
 const form =ref({
@@ -34,6 +36,9 @@ const rules = {
       }
     }
   ]
+}
+const doLogin=()=>{
+  router.push("/")
 }
 
 

@@ -4,7 +4,7 @@ import Home from "@/components/Home.vue";
 import UserList  from "@/components/Detail/UserList.vue";
 import MemberService from "@/components/Detail/MemberService.vue";
 import Members from "@/components/Detail/Members.vue";
-import Orders from "@/components/Detail/Orders.vue";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +18,7 @@ const router = createRouter({
       path:'/',
       name:"home",
       component:Home,
+      redirect:"/userlist",
       children:[
         {
           path:'members',
@@ -28,11 +29,6 @@ const router = createRouter({
           path:'userlist',
           name:"userlist",
           component:UserList
-        },
-        {
-          path:'orders',
-          name:"orders",
-          component:Orders,
         },
         {
           path:"member-service",
